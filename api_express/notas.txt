@@ -1,0 +1,15 @@
+REST - API REST
+Representational State Transfer
+Es un servicio que no tiene estado "stateless"
+
+METODOS
+  -GET -> Obtener datos
+  -PUT -> Reemplazar todos los datos
+  -PATCH -> Reemplazar parte de los datos
+  -POST -> Insertar datos
+  -DELETE -> Eliminar datos
+
+PRINCIPIO DE UNICA RESPONSABILIDAD
+Cada metodo, archivo debe dedicarse a una sola tarea.
+Por ejemplo tener un solo archivo que resuelva las rutas.
+

@@ -1,0 +1,165 @@
+tree -L 2
+-- L es de nivel y 2 cantidad de niveles que mostrara
+
+touch file1 file2
+-- permite crear varias archivos a la vez
+
+echo -e "\n agregando un salto de linea"
+ -- -e permite reconocer el salto de linea
+
+rm -i 
+-- muestra un aviso antes de borrar
+-- -rf forza el borrado recursivo
+
+head -n 15 file.txt 
+-- por defecto muestra 10 lineas
+-- con -n <numero> podemos definir la cantidad de lineas
+
+tail -n 15 file.txt 
+-- por defecto muestra las 10 ultimas lineas
+
+less file.txt 
+ -- se abre un modo interactivo 
+ -- usando / podemos hacer busquedas
+
+xdg-open file.txt 
+ -- abre con el editor de texto predetermiando el archivo
+
+Que es un comando 
+ -- un programa ejecutable 
+ -- una utilidad de la shell 
+ -- una funcion de la shell 
+ -- un alias
+
+type 
+ -- muestra informacion de un comando
+
+alias l='ls -lh' 
+ -- permite crear comandos temporales con un alias
+
+help <comando> 
+ -- muestra la ayuda para el comando - es una opcion de bash
+
+info <comando>; whatis <comando> 
+ -- tambien se utilizan para mostrar informacion de un comando
+
+wildcards - comodines 
+ -- ls *.txt mostrar todos los que terminen en .txt 
+ -- ls file_name? listar el nombre mas uno o mas caracteres, segun el numero de ? 
+ -- ls -d [[:upper:]]* listar todos los directorios que inicien con letra mayuscula 
+ -- ls [ad]* listar todos los archivos que inicien con a o d
+
+ls archivo > output.txt 2>&1 
+ -- registras las dos salidas en el archivo 2 error 1 stdo
+
+ls & mkdir prueba & cal 
+ -- ejecutar varios comando de forma asincrona
+
+mkdir prueba && cd prueba 
+ -- ejecutar comandos de forma condicional, el segundo se ejecuta si el primero se cumple
+
+tipos de archivos 
+ -- - archivo normal 
+ -- d directorio 
+ -- l link simbolico 
+ -- b archivo de bloque - por ejemplo una memoria usb
+
+a quienes se les da permisos
+OWNER	GROUP	OTHERS
+
+modo octal
+OCTAL	BINARIO	PERMISOS
+0	000	---
+1	001	--x
+2	010	-w-
+3	011	-wx
+4	100	r--
+5	101	r-x
+6	110	rw-
+7	111	rwx
+
+modo simbolico
+u	user-usuario
+g	group-grupo
+o	other-otros
+a	all-todos
+
+chmod u-x,go=w file.txt
+ -- cambio de permisos con el modo simbolico
+
+variables de entorno
+son valores dinamicos que afectan a los programas o procesos que se ejecutan en un SO
+
+printenv
+imprime en terminal un listado de las variables de entorno
+
+variables de entorno relevantes
+$HOME
+$PATH
+
+nano .bashrc
+ -- podemos agregar otra variable de entorno a PATH, agregando al archivo
+	PATH=PATH:/home/dev/nueva_ruta
+
+comandos de busqueda
+which - ayuda a encontrar la ruta de los binarios - which code
+find - permite encontrar un archivo
+
+find <directory> <file_name>
+find <directory> -name *.txt - buscar por nombre o extension de archivo
+find <directory> -type d -name directory_name
+find <directory> -type f -name *.log
+find <directory> -size 20M
+
+grep
+grep Towers movies.csv
+ -- buscar todas las peliculas que contengan la cadena Towers
+
+grep -i The movies.csv
+ -- buscar en todas las lineas exactamente la cadena The
+
+grep -ci The movies.csv
+ -- contar las veces que aparece la cadena en el archivo
+
+grep -vi Towers movies.csv
+ -- buscar las lineas que no contengan la cadena
+
+red
+traceroute www.google.com
+ -- todas las redes por las que se pasan para llegar al sitio
+
+netstat -i
+ -- lista los dispositivos de red, de manera mas legible que ifconfig
+
+comprimir - descomprimir
+tar -cvf file.tar file
+ -- comprimir un archivo en formato tar
+
+tar -cvzf file.tar.gz file
+ -- comprimir con el formato tar mas gz
+
+tar -zxvf file.tar.gz
+ -- descomprimir el formato .tar.gz
+
+tar -xvf file.tar
+ -- descomprimir el formato .tar
+
+zip -r file.zip file
+unzip file.zip
+ -- comprimir y descomprimir archivo en formato .zip
+
+manejo de procesos
+ps
+ -- mostrar un resumen de los procesos que se estan ejecutando en background
+
+top
+ -- lista de procesos segun los recursos
+ -- dentro de la informacion se pueden usar atajos, con la letra h se entra al menu de ayuda
+
+editores de texto
+ - nano
+ - vi
+ - vim
+
+
+

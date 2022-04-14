@@ -1,0 +1,45 @@
+p{
+  color: lightskyblue;
+  font-size: 24px;
+}
+
+/* class */
+.parr{
+  color: lightsalmon;
+}
+
+/* id */
+#parra{
+  color: lightgreen;
+}
+
+/* Seudo-clases y Seudo-elementos */
+.main-nav{
+  margin-top: 10;
+  list-style: none;
+  padding-left: 0;
+  /* background-color: lightgreen; */
+}
+
+.main-nav__item{
+  display: inline-block;
+}
+
+.main-nav__item a{
+  color: whitesmoke;
+  padding: 5px;
+  border-radius: 8;
+  background-color: lightgreen;
+}
+
+.main-nav__item a:hover{
+  color: lightskyblue;
+}
+
+.main-nav__item a:active{
+  color: lightcoral;
+}
+
+.main-nav__item::after{
+  content: " | ";
+}

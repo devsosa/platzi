@@ -1,0 +1,49 @@
+/* reset de los estilos por defecto */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* aplicar estilos a etiquetas */
+
+h1 {
+  color: lightsalmon;
+  font-family: serif;
+  margin-bottom: 10px;
+}
+
+/* aplicar estilos a las clases */
+
+.title {
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.nav {
+  margin-top: 10px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* aplicar estilos a la lista para que se organice de forma horizontal */
+
+.nav li{
+  display: inline-block;
+}
+
+/* estilos especifilos a las etiquetas a */
+
+.nav a{
+  color: whitesmoke;
+  background-color: darkseagreen;
+  padding: 10px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+/* aplicar estilos a una etiqueta a especifica */
+
+.nav .blog{
+  background-color: lightcoral;
+}

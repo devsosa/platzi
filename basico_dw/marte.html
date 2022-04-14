@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu peso en otro planeta</title>
+</head>
+<body>
+    <h1>Tu pero en otro planeta</h1>
+    <p>En la tierra pesas distinto que en Marte o Jupiter</p>
+    <script>
+        let tierra = 9.8;
+        let marte = 3.7;
+        let jupiter = 24.8;
+        //let peso = 77;
+        let peso_final;
+        let get_peso = parseFloat(prompt("Escribe tu peso: "));
+        let planeta = parseInt(prompt("Elije tu planeta: 1 es Marte, 2 es Jupiter"));
+
+        if(planeta === 1){
+            //codigo que realia la conversion
+            peso_final = get_peso * marte / tierra;
+            document.write("Tu peso en la Tierra es: " + get_peso + "<br><br>");
+            //document.write("Peso en Marte: " + parseInt(peso_final) + "<br><br>");
+            document.write("Tu peso en Marte con 2 decimales: " + "<strong>" + peso_final.toFixed(2) + " Kg<strong><br>");
+            document.write("<button onclick='window.location.reload(true)'>Volver a intentarlo</button>");
+        }else if(planeta === 2){
+            //codigo que realia la conversion
+            peso_final = get_peso * jupiter / tierra;
+            document.write("Tu peso en la Tierra es: " + get_peso + "<br><br>");
+            //document.write("Peso en Marte: " + parseInt(peso_final) + "<br><br>");
+            document.write("Tu peso en Jupiter con 2 decimales: " + "<strong>" + peso_final.toFixed(2) + " Kg<strong><br>");
+            document.write("<button onclick='window.location.reload(true)'>Volver a intentarlo</button>");
+        }else{
+            alert("Por favor ingresa un valor valido!");
+            document.write("<button onclick='window.location.reload(true)'>Volver a intentarlo</button>");
+        }
+    </script>
+
+</body>
+</html>

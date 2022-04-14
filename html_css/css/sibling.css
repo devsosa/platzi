@@ -1,0 +1,22 @@
+/* adjacent sibling */
+/* aplicar estilo a los p que esten cerca de un h2 */
+h2 + p{
+  color: lightcoral;
+}
+
+/* general sibling */
+h2 ~ p{
+  color: lightseagreen;
+}
+
+/* child */
+/* se aplica a un hijo directo */
+div > p {
+  color: lightslategray;
+}
+
+/* descendant */
+/* todas las etiquetas p que esten dentro de una div */
+article p{
+  color: lightgreen;
+}

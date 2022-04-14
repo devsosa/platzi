@@ -1,0 +1,126 @@
+###--HTML--###
+
+--usar webp--
+desde la terminal:
+cwebp <imagen_a_convertir> -o <imagen_salida.webp>
+
+--webs--
+https://tinypng.com/
+https://www.verexif.com/
+
+--videos--
+para majer diferentes tipos de videos
+
+<video>
+  <sourse src=".mp4">
+  <sourse src=".m4v">
+</video>
+
+El navegador selecciona el formato
+
+--input | button--
+input recomendado para formularios
+button para otro tipo de boton personalizado
+
+###--CSS3--###
+
+--modelo de caja--
+
+margin: espacio fuera de la caja
+
+border: contorno que definira el limite de cada elemento
+
+padding: espacio interno de la caja, se ocupa para darle una mejor 
+
+posición al contenido interno
+
+content: texto, video, imagenes o cualquier elemento
+
+width y height: define el ancho y alto del contenido
+
+box-sizing: border-box -> acomoda el contenido, aunque se modifique el tamaño del border y el padding
+
+-- Herencia --
+Codigo CSS que se pasara de un elemento padre a un hijo
+
+-- Especificidad de Selectores --
+Primero: se cargan los estilos del navegador
+Segundo: los estilos que nosotros definimos en los .css
+Tercero: se cargan los estilos que tiene el termino !important
+
+-- Nivel de importancia de los selectores para el navegador --
+!Important
+Inline styles
+#id
+.class
+tag
+
+-- IMPORTANTE --
+- evitar el uso de !Important
+- evitar el uso de style embebido
+- evitar el uso de ids
+
+-- Combinadores --
+- Hermano adyacente o cercano | adjacent sibling
+ div + p {
+   ...
+ }
+
+ - Hijo | child
+ div > p {
+   ...
+ }
+
+ - Hermano general | general sibling
+ div ~ p {
+   ...
+ }
+
+ - Descendiente | descendant
+ div p {
+   ...
+ }
+
+-- Medidas --
+
+- Absolutas -> no cambian
+px
+
+- Relativas -> si cambian
+%
+em
+rem (root em)
+max-width / max-height
+min-width / min-height
+vw (viewport width)
+vh (viewport height)
+
+-- Position --
+- por defecto html trae la posicion static
+- absolute -> cambia su posicion
+- relative -> sigue en su posicion pero puedo moverlo
+- fixed
+- sticky
+
+-- Display - Flex --
+- display direction -> es la forma en que se acomodan los hijos
+- display: flex -> flex-row:
+- display: flex -> flex-column:
+- display: flex -> flex-wrap: wrap, permite acomodar el contenido al tamano de la pagina
+- display: flex -> justify-content: center, permite centrar el contenido
+
+- display: flex -> justify-content: flex-end, permite mover el contenido al final
+
+- display: flex -> justify-content: space-around, between, evenly, permite distribuir el contenido
+
+-- flex box - vertical --
+- flex-grow: 1 -> llena el espacio que sobra, y se puede aplicar a varios elementos
+
+
+-- web fonts --
+- Genericas: 
+serif: 
+sans-serif: planas
+cursive:
+monospace:
+

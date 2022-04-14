@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulario-registro</title>
+</head>
+<body>
+  <h1>auto complete | required | select</h1>
+  <main>
+    <form action="">
+      <label for="nombre">
+        <span>nombre:</span>
+        <input type="text" name="nombre" id="nombre" autocomplete="name">
+      </label><br>
+      <label for="correo">
+        <span>correo:</span>
+        <input type="email" name="correo" id="correo" autocomplete="mail" required>
+      </label><br>
+      <h3>Select</h3>
+      <label for="paises">
+        <!-- <span>pais:</span>
+        <input type="text" name="pais" id="pais" autocomplete="country"> -->
+        <span>paises:</span>
+        <select name="paises" id="paises">
+          <option value="El-Salvador">El Salvador</option>
+          <option value="Guatemala">Guatemala</option>
+          <option value="Honduras">Honduras</option>
+          <option value="Nicaragua">Nicaragua</option>
+          <option value="Costa-Rica">Costa Rica</option>
+        </select>
+      </label><br>
+      <label for="codigo-potal">
+        <span>codigo potal:</span>
+        <input type="text" name="codigo-potal" id="codigo-potal" autocomplete="postal-code">
+      </label><br>
+      <h3>Data List</h3>
+      <input list="pais">
+      <datalist id="pais">
+        <option value="El Salvador"></option>
+          <option value="Guatemala"></option>
+          <option value="Honduras"></option>
+          <option value="Nicaragua"></option>
+          <option value="Costa Rica"></option>
+      </datalist>
+      <br><br>
+      <h3>Botones: submit, button</h3>
+      <h4>submit</h4>
+      <input type="submit" value="Enviar">
+      <h4>button</h4>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+</body>
+</html>
