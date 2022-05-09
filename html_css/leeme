@@ -124,3 +124,53 @@ sans-serif: planas
 cursive:
 monospace:
 
+-- MEDIA QUERYS --
+
+- Mobile first / Only
+Debe de iniciar el diseño para movil, despues tablet y por ultimo pc o laptop
+
+- brake poinst
+Son los tamaños que se definen en las media querys para los cambios de diseño
+segun el tamaño de la pantalla.
+
+- Mostly fluid
+Se inicia desde elementos apilados uno sobre otro y a medida se cambia de tamaño de va distribuyendo.
+
+- Layout Shifter
+Contenedores padres que se acomodan junto con el contenido.
+
+- Column drop
+Al momento que vaya creciendo los elementos van subiendo.
+
+-- RECOMENDACIONES --
+
+- mejorar la velocidad
+dividir las media querys -> no recargar todos en un solo css
+se recomienda tener un archivo inicial
+break points divididos: mobile.css, tablet.css, desktop.css
+
+- cantidad de break points
+Maximo se deben crear de 3 a 4
+
+
+-- Accesibilidad --
+
+- semantica -
+Hay software que lee en que seccion de la pagina esta: header, content, footer
+
+- Texto -
+La medida del texto es muy importante
+el texto en pixeles no se puede agrandar
+Se recomienda usar medidas relativas, como rem
+
+- labels - alt - title -
+label -> al darle click selecciona el input o con la tecla tab
+      -> lable se vuelve como un contenedor
+
+alt -> el software especial puede leer la descripcion de label
+    -> deben ser descriptivos con la imagen y contenido
+    -> tambien funciona cuando la imagen no se carga, se carga la descripcion del alt
+    
+title -> para las etiquetas img y a, puede agrarse el title
+      -> se puede describir hacia donde se dirige el hipervinculo
+
