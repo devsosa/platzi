@@ -1,4 +1,5 @@
 const boom = require('@hapi/boom');
+const bcrypt = require('bcrypt');
 //const { use } = require('express/lib/application');
 
 const {models} = require('../libs/sequelize');
@@ -8,7 +9,12 @@ class UserService{
   constructor(){}
 
   async create(data){
-    const newUser = await models.User.create(data);
+    const hash = await bcrypt.hash(data.password, 10);
+    const newUser = await models.User.create({
+      ...data,
+      password: hash
+    });
+    delete newUser.dataValues.password;
     return newUser;
     //return data;
   }
@@ -21,6 +27,13 @@ class UserService{
     //const client = await getConnection();
     //const rta = await client.query('SELECT * FROM tasks');
     //return rta.rows;
+  }
+
+  async findByEmail(email){
+    const rta = await models.User.findOne({
+      where: { email }
+    });
+    return rta;
   }
 
   async findOne(id){
