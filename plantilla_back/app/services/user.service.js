@@ -1,3 +1,5 @@
+const boom = require('@hapi/boom');
+
 class UsersService{
 
   constructor(){
@@ -14,10 +16,14 @@ class UsersService{
 
   async findOne(){
 
+    /* if(!product){
+      throw boom.notFound('User not found');
+    }
+    return product; */
   }
 
   async update(){
-
+    //throw boom.notFound('User not found');
   }
 
   async delete(){
